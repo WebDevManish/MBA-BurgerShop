@@ -1,0 +1,435 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy.woff2);
+}
+@font-face {
+  font-family: "Monument-Regular";
+  src: url(./fonts/MonumentExtended-Regular.otf);
+}
+@font-face {
+  font-family: "Monument-Ultrabold";
+  src: url(./fonts/MonumentExtended-Ultrabold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Monument-Ultrabold;
+  font-size: 3vw;
+}
+::selection {
+  background-color: #999999;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #f1f0eb;
+  padding: 0.1px;
+}
+#nav {
+  height: 6vw;
+  margin-top: 5vh;
+  padding: 0 2vw;
+  width: 100%;
+  border-top: 2px solid #999999;
+  border-bottom: 2px solid #999999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav-left {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 2px solid #999999;
+}
+#nav-left h1 {
+  margin-top: 1vw;
+  font-family: Monument-Ultrabold;
+  font-size: 1.6rem;
+  line-height: 1rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+#nav-left h2 {
+  font-size: 0.4rem;
+  font-family: Monument-Regular;
+  user-select: none;
+}
+#nav-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#nav-right h3 {
+  font-family: "Gilroy";
+  height: 100%;
+  border-right: 2px solid #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5vw;
+  font-size: 0.5rem;
+  line-height: 0;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+#nav-right h3:first-child {
+  min-width: 20%;
+}
+#nav-right h3:nth-child(2) {
+  min-width: 20%;
+}
+#nav-right h3:nth-child(3) {
+  min-width: 20%;
+}
+.button {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button button {
+  font-family: "Gilroy";
+  height: 3.5vw;
+  width: 10vw;
+  border-radius: 50px;
+  border: 0;
+  outline: 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.4rem;
+  line-height: 0;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+}
+
+#page1 {
+  height: calc(100vh - 6vw);
+  padding: 0 5vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  position: relative;
+}
+#video {
+  height: 100%;
+  width: 100%;
+}
+#video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#content {
+  height: 100%;
+  width: calc(100% - 10vw);
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 5vw;
+}
+#subPart {
+  width: 100%;
+  padding: 1vw 2vw;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  bottom: 0;
+}
+#subPart h1 {
+  font-size: 2rem;
+  line-height: 130%;
+  color: #fff;
+}
+#subPart p {
+  font-family: "Gilroy";
+  font-size: 0.5rem;
+  color: #fff;
+  margin-top: 1vw;
+}
+.separation {
+  width: 100%;
+  background-color: #4b4b4b;
+  height: 10px;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  padding: 3vw 5vw;
+}
+#page2 h1 {
+  font-family: "Monument-Ultrabold";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2vw;
+}
+#page2-content {
+  height: calc(100% - 12.5vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cleft {
+  height: calc(100vh - 15vw);
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: red; */
+}
+#cleft h2 {
+  font-family: "Monument-Regular";
+  font-size: 1rem;
+  font-weight: 900;
+}
+#cleft p {
+  margin-top: 1vw;
+  font-family: "Gilroy";
+  font-size: 0.5rem;
+}
+#cright {
+  height: calc(100vh - 15vw);
+  width: 48%;
+  background-image: url(./assets/mainImg.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#page3 {
+  height: 100vh;
+  width: 100%;
+  padding: 3vw 5vw;
+  display: flex;
+  flex-direction: column;
+}
+#page3 h1 {
+  font-family: "Monument-Ultrabold";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2vw;
+}
+#scroll {
+  height: 50%;
+  padding: 0 2vw;
+  margin-bottom: 3vw;
+  background-color: #dadada;
+  position: relative;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  display: inline-block;
+}
+.item {
+  height: 80%;
+  width: 40vh;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  top: 12%;
+  cursor: pointer;
+}
+.item img {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+}
+.item-desc {
+  /* background-color: red; */
+  height: 20%;
+}
+.item-desc h2 {
+  text-align: center;
+  white-space: wrap;
+  font-family: "Gilroy";
+  font-size: 1.5vw;
+}
+.txt {
+  width: 100%;
+  margin-top: 2vw;
+}
+.txt h3 {
+  font-family: "Monument-Regular";
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 120%;
+}
+#scroll::-webkit-scrollbar {
+  display: none;
+}
+
+#page4 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+}
+#page4 h1 {
+  font-family: "Monument-Ultrabold";
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2vw;
+  text-align: center;
+}
+#page4 p{
+  text-transform: uppercase;
+}
+#page4 span{
+  color: #ff0000;
+}
+
+/* For Mobiles */
+@media (max-width: 600px) {
+  #nav {
+    height: 8vw;
+    margin-top: 3vh;
+  }
+  #nav-left h1 {
+    font-size: 1.8rem;
+    line-height: 1.25rem;
+  }
+  #nav-right h3 {
+    font-size: 0.6rem;
+  }
+  #page1 {
+    height: calc(100vh - 40vw);
+    padding: 0 5vw;
+  }
+  #subPart {
+    bottom: 5%;
+  }
+  #page2 {
+    padding: 10vw 5vw;
+  }
+  #page2 h1 {
+    font-size: 2rem;
+  }
+  #page2-content {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #cleft {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #cleft h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 900;
+  }
+  #cleft p {
+    font-family: "Gilroy";
+    font-size: 1rem;
+    text-align: center;
+  }
+  #cright {
+    height: 40vh;
+    min-width: 80%;
+    max-width: 100%;
+  }
+  #page3 {
+    padding: 10vw 5vw;
+  }
+  #page3 h1 {
+    font-size: 2rem;
+    margin-bottom: 2vw;
+  }
+  #scroll {
+    height: 50%;
+    padding: 0 2vw;
+    margin-bottom: 3vw;
+    background-color: #dadada;
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+  }
+  .item {
+    height: 80%;
+    width: 40vh;
+    display: inline-block;
+    position: relative;
+    top: 12%;
+  }
+  .item-desc {
+    height: 20%;
+  }
+  .item-desc h2 {
+    font-size: 20px;
+  }
+  .txt {
+    width: 100%;
+    margin-top: 2vw;
+  }
+  .txt h3 {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+/* For Tablets */
+@media (min-width: 600px) and (max-width: 768px) {
+  #nav {
+    height: 7vw;
+    margin-top: 5vh;
+  }
+  #nav-left h1 {
+    font-size: 1.8rem;
+    line-height: 1.2rem;
+  }
+  #nav-right h3 {
+    font-size: 0.6rem;
+  }
+  #page1 {
+    height: 80%;
+    padding: 0 5vw;
+  }
+  #subPart {
+    bottom: 2%;
+  }
+  #cright {
+    height: calc(100vh - 40vw);
+    width: 48%;
+    background-image: url(./assets/mainImg.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .txt {
+    width: 100%;
+    margin-top: 2vw;
+  }
+  .txt h3 {
+    text-align: left;
+    font-size: 25px;
+    line-height: 120%;
+  }
+}
